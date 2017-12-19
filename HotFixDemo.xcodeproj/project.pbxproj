@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69558D6F1FE9019400F8014E /* UIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 69558D6E1FE9019400F8014E /* UIView+CornerRadius.m */; };
 		69BBE3F71FDFC1190090D90C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BBE3F61FDFC1190090D90C /* AppDelegate.m */; };
 		69BBE3FA1FDFC1190090D90C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BBE3F91FDFC1190090D90C /* ViewController.m */; };
 		69BBE3FD1FDFC1190090D90C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69BBE3FB1FDFC1190090D90C /* Main.storyboard */; };
@@ -15,9 +16,13 @@
 		69BBE4051FDFC1190090D90C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BBE4041FDFC1190090D90C /* main.m */; };
 		69BBE40F1FDFC1F50090D90C /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BBE40C1FDFC1F40090D90C /* JPEngine.m */; };
 		69BBE4101FDFC1F50090D90C /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 69BBE40E1FDFC1F50090D90C /* JSPatch.js */; };
+		69BBE45C1FE8EB880090D90C /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BBE45B1FE8EB880090D90C /* DownloadViewController.m */; };
+		69BBE45F1FE8F5430090D90C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BBE45E1FE8F5430090D90C /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69558D6D1FE9019400F8014E /* UIView+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CornerRadius.h"; sourceTree = "<group>"; };
+		69558D6E1FE9019400F8014E /* UIView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CornerRadius.m"; sourceTree = "<group>"; };
 		69BBE3F21FDFC1190090D90C /* HotFixDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotFixDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69BBE3F51FDFC1190090D90C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69BBE3F61FDFC1190090D90C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,6 +36,10 @@
 		69BBE40C1FDFC1F40090D90C /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		69BBE40D1FDFC1F40090D90C /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
 		69BBE40E1FDFC1F50090D90C /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		69BBE45A1FE8EB880090D90C /* DownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		69BBE45B1FE8EB880090D90C /* DownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		69BBE45D1FE8F5430090D90C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		69BBE45E1FE8F5430090D90C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 		69BBE3E91FDFC1190090D90C = {
 			isa = PBXGroup;
 			children = (
+				69BBE4601FE8F9C20090D90C /* category */,
 				69BBE40B1FDFC1C80090D90C /* JSPatch */,
 				69BBE3F41FDFC1190090D90C /* HotFixDemo */,
 				69BBE3F31FDFC1190090D90C /* Products */,
@@ -73,6 +83,10 @@
 				69BBE4001FDFC1190090D90C /* LaunchScreen.storyboard */,
 				69BBE4031FDFC1190090D90C /* Info.plist */,
 				69BBE4041FDFC1190090D90C /* main.m */,
+				69BBE45A1FE8EB880090D90C /* DownloadViewController.h */,
+				69BBE45B1FE8EB880090D90C /* DownloadViewController.m */,
+				69BBE45D1FE8F5430090D90C /* HomeViewController.h */,
+				69BBE45E1FE8F5430090D90C /* HomeViewController.m */,
 			);
 			path = HotFixDemo;
 			sourceTree = "<group>";
@@ -85,6 +99,15 @@
 				69BBE40E1FDFC1F50090D90C /* JSPatch.js */,
 			);
 			path = JSPatch;
+			sourceTree = "<group>";
+		};
+		69BBE4601FE8F9C20090D90C /* category */ = {
+			isa = PBXGroup;
+			children = (
+				69558D6D1FE9019400F8014E /* UIView+CornerRadius.h */,
+				69558D6E1FE9019400F8014E /* UIView+CornerRadius.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +186,9 @@
 				69BBE40F1FDFC1F50090D90C /* JPEngine.m in Sources */,
 				69BBE4051FDFC1190090D90C /* main.m in Sources */,
 				69BBE3F71FDFC1190090D90C /* AppDelegate.m in Sources */,
+				69558D6F1FE9019400F8014E /* UIView+CornerRadius.m in Sources */,
+				69BBE45C1FE8EB880090D90C /* DownloadViewController.m in Sources */,
+				69BBE45F1FE8F5430090D90C /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
