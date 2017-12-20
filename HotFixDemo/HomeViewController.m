@@ -18,8 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title=@"首页";
     // Do any additional setup after loading the view.
     [self setupFunction];
+    [self setDefaultView];
 }
 
 //方法注入口，只做添加
@@ -29,8 +31,24 @@
 }
 
 
+-(void)setDefaultView{
+    UIView *bgView=[[UIView alloc]initWithFrame:CGRectMake(5, Sheight-300, Swidth-10, 290)];
+    UIButton *btnFun1=[[UIButton alloc]initWithFrame:CGRectMake(10, 10, 100, 40)];
+    bgView.backgroundColor=[UIColor colorWithRed:0.6 green:0.8 blue:0 alpha:1];
+    [bgView addSubview:btnFun1];
+    [btnFun1 setTitle:@"添加一个按钮" forState:UIControlStateNormal];
+    [btnFun1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btnFun1.backgroundColor=[UIColor whiteColor];
+    btnFun1.titleLabel.font=[UIFont systemFontOfSize:12];
+    [btnFun1 addTarget:self action:@selector(btnFun1:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:bgView];
+}
+
+
 - (IBAction)btnFun1:(id)sender {
-    [self excuteDownload:@"http://sso.topcheer.com:5000/hotfix/addbtn.js"];
+//    [self excuteDownload:@"http://sso.topcheer.com:5000/hotfix/addbtn.js"];
+    [self excuteDownload:@"https://raw.githubusercontent.com/UnderMistake/HotFixDemo/master/js/addbtn.js"];
 }
 - (IBAction)btnFun2:(id)sender {
 }
@@ -40,8 +58,10 @@
 }
 
 -(void)addButton{
-    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 40)];
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(10, 10, 100, 40)];
     [btn setTitle:@"这是一个新增的按钮" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:btn];
 }
 
@@ -69,6 +89,7 @@
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 [JPEngine startEngine];
                 [JPEngine evaluateScriptWithPath:path];
+                NSLog(@"download over");
             }];
             if (error) {
                 NSLog(@"error descript:%@",error.description);
